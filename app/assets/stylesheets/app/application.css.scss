@@ -1,0 +1,24 @@
+// Place all the styles related to the App::Application controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.app-content{
+	padding: 10px;
+}
+
+.app-menu{
+	background: #CECECE; 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E0E0E0), to(#FFFFFF));
+	background: -moz-linear-gradient(19% 75% 90deg,#E0E0E0, #FFFFFF);
+	background: linear-gradient(#E0E0E0, #ffffff);
+	padding: 5px;
+	text-align: center;
+	border-bottom: 1px solid #CECECE;
+
+	a{
+		line-height: 20px;
+	}
+
+	a:hover{
+		color: #999999 !important;
+	}
+}

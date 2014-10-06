@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MyBackpacking</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= yield :javascript %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+
+	<!-- Menu -->
+	<div id="main-menu">
+		<div id="logo">myBackpacking.com</div>
+			<% if user_signed_in? %>
+				<div class="user-info">
+					<%= t :hello %><%= current_user.name %><br />
+					<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+				</div>
+			<% else %>
+				<div class="signin-buttons">
+					<a href="/auth/facebook/">
+						<%= image_tag("common/signin_signup_button.png") %>
+					</a>
+				</div>
+			<% end %>
+		<div class="clear-float"></div>
+	</div>
+	<!-- End Menu -->
+
+	<div class="alerts-notices hidden">
+		<% if notice %>
+		<p class="alert alert-success"><%= notice %></p>
+		<% end %>
+		<% if alert %>
+		<p class="alert"><%= alert %></p>
+		<% end %>
+	</div>
+
+	<div class="container-fluid page">
+		<%= yield :main_content or yield%>
+	<div>
+
+</body>
+</html>

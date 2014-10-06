@@ -1,0 +1,50 @@
+// Place all the styles related to the Admin::Application controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.admin-content{
+	padding: 10px;
+}
+
+.admin-menu{
+	background: #CECECE; 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E0E0E0), to(#FFFFFF));
+	background: -moz-linear-gradient(19% 75% 90deg,#E0E0E0, #FFFFFF);
+	background: linear-gradient(#E0E0E0, #ffffff);
+	padding: 5px;
+	text-align: center;
+	border-bottom: 1px solid #CECECE;
+
+	a{
+		line-height: 20px;
+	}
+
+	a:hover{
+		color: #999999 !important;
+	}
+}
+
+table {
+	width: 100%;
+	thead{
+		th{
+			background-color: #CECECE;
+			padding: 10px;
+			border: 1px solid #999999;
+		}
+	}
+	
+	tbody {
+		tr{
+			border: 1px solid #999999;
+		}
+
+		tr:hover{
+			background-color: #EFEFCC;
+		}
+
+		td{
+			padding: 5px;
+			text-align: center;
+		}
+	}
+}

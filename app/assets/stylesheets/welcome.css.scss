@@ -1,0 +1,92 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.page{	
+	margin: 0px;
+	padding: 0px;
+}
+
+.title{
+	background-position: 50% 50%;
+	text-indent: -9999%;
+	background-repeat: no-repeat;
+	height: 110px;
+	padding-top: 80px;
+	background-size: 70%;
+}
+
+.module-base{
+	min-height: 800px;
+	min-width: 320px;
+	background-position: 50% 50%;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 800px;
+	position: relative;
+}
+
+
+
+#welcome-to-wild-life{
+	@extend .module-base;
+	background-image: image-url('photos/backpacking-welcome-to-wild-life.jpg');	
+
+	.title{
+		background-image: image-url('welcome/titles/welcome-to-wild-life.png');
+		background-size: 70%;
+	}
+}
+
+#enjoy-the-view{
+	@extend .module-base;
+	background-image: image-url( 'photos/backpacking-enjoy-the-view.jpg');
+
+	.title{
+		background-image: image-url('welcome/titles/enjoy-the-view.png');
+		background-size: 35%;
+	}
+}
+
+#share-your-pictures{
+	@extend .module-base;
+	background-image: image-url( 'photos/backpacking-share-your-pictures.jpg');
+
+	.title{
+		background-image: image-url('welcome/titles/share-your-pictures.png');
+		background-size: 40%;
+	}
+}
+
+#share-your-tips{
+	@extend .module-base;
+	background-image: image-url( 'photos/backpacking-share-your-tips.jpg');
+
+	.title{
+		background-image: image-url('welcome/titles/share-your-tips.png');
+		background-size: 40%;
+	}
+}
+
+#make-new-friends{
+	@extend .module-base;
+	background-image: image-url( 'photos/backpacking-make-new-friends.jpg');
+
+	.title{
+		background-image: image-url('welcome/titles/make-new-friends.png');
+		background-size: 45%;		
+	}
+}
+
+#do-a-backpacking{
+	@extend .module-base;
+	background-image: image-url( 'photos/backpacking-do-a-backpacking.jpg');
+
+	.title{
+		background-image: image-url('welcome/titles/do-a-backpacking.png');
+		background-size: 45%;
+	}
+}
+

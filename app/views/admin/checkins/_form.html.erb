@@ -1,0 +1,25 @@
+<%= form_for(@admin_checkin) do |f| %>
+  <% if @admin_checkin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_checkin.errors.count, "error") %> prohibited this admin_checkin from being saved:</h2>
+
+      <ul>
+      <% @admin_checkin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.collection_select :user, User.all, :id, :name, {:prompt=>true} %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br>
+    <%= f.collection_select :place, Place.all, :id, :city, {:prompt=>true} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

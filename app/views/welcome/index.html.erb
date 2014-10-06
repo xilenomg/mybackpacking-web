@@ -1,0 +1,28 @@
+<% content_for :main_content do %>
+<div class="module" id="welcome-to-wild-life">
+	<div class="title">Welcome to wild life</div>
+</div>
+
+<div class="module" id="enjoy-the-view">
+	<div class="title">Enjoy the view</div>
+</div>
+
+<div class="module" id="share-your-pictures">
+	<div class="title">Share your pictures</div>
+</div>
+
+<div class="module" id="share-your-tips">
+	<div class="title">Share your tips </div>
+</div>
+
+<div class="module" id="make-new-friends">
+	<div class="title">Make new friends</div>
+</div>
+
+<div class="module" id="do-a-backpacking">
+	<div class="title">Do a backpacking</div>
+	<% if !user_signed_in? %>
+		<%= link_to 'Login with Facebook', '/auth/facebook/', :class => "login-facebook-button" %>
+	<% end %>
+</div>
+<% end %>

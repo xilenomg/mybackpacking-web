@@ -1,0 +1,27 @@
+<h1>Map</h1>
+<h4>Where I have been</h4>
+
+
+<% if !@places.nil? %>
+	<div id="places-map">
+		<div class="places-list">
+			<h4>Places I've been at (<%= @places.size %>)</h4>
+			<span id="maximize-map">&lt;- -&gt;</span>
+			<ul>
+			<% @places.each do |place| %>
+				<li data-lat="<%= place.latitude %>" data-lng="<%= place.longitude %>"><%= place.country %> - <%= place.state %> - <%= place.city %></li>
+			<% end %>
+			</ul>
+		</div>
+		<div id="map-canvas"></div>
+	</div>
+<% else %>
+	I haven't checked in anywhere yet. Do you want to start? <%= link_to 'Checkin', app_checkin_path %>
+<% end %>
+
+<% content_for :javascript do%>
+	<%= javascript_tag do %>
+		MYBAPP.extras.myLocations = <%= raw @places.to_json %>;
+	<% end %>
+	<%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp' %>
+<% end %>

@@ -1,0 +1,136 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html,body{
+	min-width: 340px;
+}
+
+a{
+	color: inherit !important;
+
+	img{
+		border: 0;
+	}
+
+	&:hover{
+		background-color: transparent !important;
+	}
+}
+
+ #main-menu{
+ 	background-color: #2567CD;
+ }
+
+.common-sprite{
+	background-image: image-url("common-sprite.png");
+	text-indent: -9999%;
+	position: relative;
+ 	background-repeat: no-repeat;
+}
+
+ #logo{
+ 	@extend .common-sprite;
+ 	background-position: 0px 0px;
+ 	width: 210px;
+	height: 45px;
+	float: left;
+	margin: 5px;
+
+	@media (max-width: 480px){
+		width: 160px;
+		background-size: 174%;
+		height: 34px;
+		margin-top: 10px;
+	}
+ }
+
+.signin-buttons{
+	float: right;
+	margin: 5px;
+	margin-top: 12px
+}
+
+ .menu-button{
+ 	margin-top: 3px;
+ }
+
+ #sign-in{
+	@extend .common-sprite;
+	@extend .menu-button;
+	background-position: -114px -56px;
+	width: 75px;
+	height: 37px;
+	float: left;
+ }
+
+ #sign-up{
+	@extend .common-sprite;
+	@extend .menu-button;
+	background-position: -6px -56px;
+	width: 74px;
+	height: 37px;
+	float: left;
+	margin-left: 5px;
+ }
+
+.alerts-notices{
+	position: absolute;
+	top: 65px;
+	z-index: 10;
+	left: 10px;
+	right: 10px;
+}
+
+.login-facebook-button{
+	@extend .common-sprite;
+
+	position: absolute;
+	text-indent: -9999%;
+	width: 227px;
+	height: 60px;
+	background-position: -6px -172px;
+	left: 50%;
+	margin-left: -114px;
+
+	&:hover {
+		background-color: transparent;
+	}
+}
+
+.user-info{
+	float: right;
+	text-align: right;
+	padding: 10px;
+	white-space: nowrap;
+	color: #FFFFFF;
+
+	a{
+		font-weight: bold;
+		font-size: 10px;
+		color: #FFFFFF;
+	}
+}
+
+.hidden{
+	display: none;
+}
+
+ .clear-float{
+ 	clear: both;
+ }
+
+ #map-canvas img {
+	max-width: none;
+}

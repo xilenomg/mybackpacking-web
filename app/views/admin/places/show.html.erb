@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @admin_place.country %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @admin_place.state %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @admin_place.city %>
+</p>
+
+<p>
+  <strong>Place name:</strong>
+  <%= @admin_place.place_name %>
+</p>
+
+<p>
+  <strong>Badge image:</strong>
+  <%= @admin_place.badge_image %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @admin_place.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @admin_place.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_admin_place_path(@admin_place) %> |
+<%= link_to 'Back', admin_places_path %>

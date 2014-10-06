@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uid: MyString
+  name: MyString
+  email: MyString
+  gender: MyString
+  sign_in_count: 1
+  current_sign_in_at: 2014-07-20 11:20:11
+  last_sign_in_at: 2014-07-20 11:20:11
+  role: MyString
+
+two:
+  uid: MyString
+  name: MyString
+  email: MyString
+  gender: MyString
+  sign_in_count: 1
+  current_sign_in_at: 2014-07-20 11:20:11
+  last_sign_in_at: 2014-07-20 11:20:11
+  role: MyString

@@ -1,0 +1,36 @@
+// Place all the styles related to the App::Map controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#places-map{
+	position: relative;
+
+	&.maximized{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+	}
+}
+
+#map-canvas{
+	width: 100%;
+	height: 500px;
+}
+
+.places-list{
+	position: absolute;
+	z-index: 1000;
+	top: 30px;
+	right: 10px;
+	height: 250px;
+	overflow-y: auto;
+	background: rgba(255,255,255, 0.8);
+	border-radius: 10px;
+	padding: 5px;
+
+	li:hover{
+		color: #CECECE;
+		cursor: pointer;
+	}
+}

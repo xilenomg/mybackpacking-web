@@ -1,0 +1,7 @@
+<% content_for :main_content do%> 
+	<div class="admin-menu"><%= render :partial => 'admin/application/menu' %></div>
+	<div class="admin-content"><%= yield %></div>
+<% end %>
+
+
+<%= render :template => 'layouts/application' %> 

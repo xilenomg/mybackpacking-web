@@ -1,0 +1,7 @@
+<% content_for :main_content do%> 
+	<div class="app-menu"><%= render :partial => 'app/application/menu' %></div>
+	<div class="app-content"><%= yield %></div>
+<% end %>
+
+
+<%= render :template => 'layouts/application' %> 

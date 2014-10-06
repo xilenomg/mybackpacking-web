@@ -1,0 +1,23 @@
+<h1>Check in</h1>
+
+<div id="page-1">
+	<p>You need to let us find you. Click on "Find my Location" button to let us find your location now.</p>
+	<button id="find-location-button">Find my Location</button>
+</div> 
+
+<div id="page-2">
+	<p>
+		<span class="country-name"></span> -
+		<span class="state-name"></span> -
+		<span class="city-name"></span>
+	</p>
+	
+	<div id="map-canvas"></div>
+
+	<button id="checkin-button">Check in <span class="country-name"></span> - <span class="state-name"></span> - <span class="city-name"></span></button>
+</div>
+
+
+<% content_for :javascript do%> 
+<%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp' %>
+<% end %>
